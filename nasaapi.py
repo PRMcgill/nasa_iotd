@@ -2,11 +2,11 @@ import requests
 from PIL import Image
 import json
 import urllib.request
-api_key = 'Tc41S7q6R90bBSNdzEOe6JXaXFCGHgTfF1syNFpM'
+api_key = 'Tc41S7q6R90bBSNdzEOe6JXaXFCGHgTfF1syNFpM' # put in your individual api key
 date = input("enter a date ex. yyyy-mm-dd:\n ")
-api_key= f"https://api.nasa.gov/planetary/apod?api_key={api_key}"
+api_web= f"https://api.nasa.gov/planetary/apod?api_key={api_key}"
 
-r = requests.get(api_key, params={"date": date})
+r = requests.get(api_web, params={"date": date})
 
 api = r.json()
 
